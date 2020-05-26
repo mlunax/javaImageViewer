@@ -20,8 +20,17 @@ public class Panel extends JPanel {
 
         //create  buttons panel
         JPanel buttons = new JPanel(new GridBagLayout());
-        //create button and add to panel
-        buttons.add(new JButton("Choose the image to view."), gbc);
+        //create button
+        JButton b = new JButton("Choose the image to view.");
+        //create open filepicker
+        b.addActionListener(actionEvent -> {
+            FilePicker fp = new FilePicker();
+            String path = fp.openDialogGetPath();
+            Viewer viewer = new Viewer(path);
+            viewer.setVisible(true);
+        });
+        //add button to panel
+        buttons.add(b, gbc);
 
         gbc.weighty = 1;
         add(buttons, gbc);
