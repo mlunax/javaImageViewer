@@ -7,6 +7,7 @@ public class Frame extends JFrame{
         add(new Panel());
         pack();
         setLocationRelativeTo(null);
+        //set exit program when exit this frame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

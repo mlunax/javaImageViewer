@@ -15,15 +15,6 @@ public class FilePicker extends JPanel {
         jfc.addChoosableFileFilter(filter);
     }
 
-    public File openDialogGetFile(){
-        File file = null;
-        int returnValue = jfc.showOpenDialog(null);
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            file= jfc.getSelectedFile();
-        }
-        return file;
-    }
-
     public String openDialogGetPath(){
         String path = null;
         int returnValue = jfc.showOpenDialog(null);
