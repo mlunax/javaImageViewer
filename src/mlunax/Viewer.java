@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class Viewer extends JFrame {
     public Viewer(String path){
+        if (path == null) return;
         ImageIcon ii = new ImageIcon(path);
         JLabel label = new JLabel(ii);
 
